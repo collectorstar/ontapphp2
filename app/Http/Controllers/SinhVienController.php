@@ -10,7 +10,6 @@ use Illuminate\Http\Request;
 use App\Http\Service\SinhVienService;
 class SinhVienController extends Controller
 {
-
     protected $sinhvienService;
 
     public function __construct(SinhVienService $sinhvienService){

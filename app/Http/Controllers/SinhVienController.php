@@ -24,17 +24,17 @@ class SinhVienController extends Controller
     public function getList(Request $request){
         $list = array();
         if(!empty($request->searchValue)){
-            switch ($request->searchValue){
+            switch ($request->typeSearch){
                 case "MSSV":
                     $list = SinhVien::where('svma','like','%'.$request->searchValue.'%')->get();
                     break;
                 case "TenSV":
                     $list = SinhVien::where('svten','like','%'.$request->searchValue.'%')->get();
+                    break;
             }
         } else {
             $list = SinhVien::get();
         }
-
         if ($request->orderBy == "desc") {
             switch ($request->orderType) {
                 case "MSSV":

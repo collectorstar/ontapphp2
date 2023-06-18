@@ -187,6 +187,7 @@
         orderBy = document.getElementById("orderBy").value;
         currentPage = 1;
         pageSize = parseInt(document.getElementById("pageSize").value);
+        console.log(searchValue,typeSearch,orderType,orderBy,currentPage,pageSize);
         getList()
     }
 
